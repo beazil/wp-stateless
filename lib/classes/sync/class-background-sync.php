@@ -150,7 +150,7 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
 
   /**
    * Determine maximum batch size
-   * 
+   *
    * @return int Default is 50
    */
   public function get_max_batch_size() {
@@ -159,7 +159,7 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
 
   /**
    * Get all batches
-   * 
+   *
    * @param int $limit 0
    * @return array
    */
@@ -230,7 +230,7 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
 
   /**
    * Delete all batches
-   * 
+   *
    * @return self
    */
   public function delete_all() {
@@ -256,7 +256,7 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
 
   /**
    * Determine if process is stopped.
-   * 
+   *
    * @return bool
    */
   public function is_stopped() {
@@ -267,7 +267,7 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
 
   /**
    * Update the whole queue size
-   * 
+   *
    * @param int $size
    * @return self
    */
@@ -285,8 +285,8 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
   }
 
   /**
-   * Clear the queue size 
-   * 
+   * Clear the queue size
+   *
    * @return self
    */
   public function clear_queue_size() {
@@ -296,7 +296,7 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
 
   /**
    * Clear process meta
-   * 
+   *
    * @return self
    */
   public function clear_process_meta() {
@@ -307,7 +307,7 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
 
   /**
    * Save process meta data
-   * 
+   *
    * @param array $meta
    */
   public function save_process_meta($meta = []) {
@@ -322,7 +322,7 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
 
   /**
    * Get process meta data. All or by the key.
-   * 
+   *
    * @param string|bool $key
    * @return array|string|null
    */
@@ -387,7 +387,7 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
 
   /**
    * Default name
-   * 
+   *
    * @return string
    */
   public function get_name() {
@@ -396,7 +396,7 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
 
   /**
    * Default helper window is set to false
-   * 
+   *
    * @return HelperWindow|bool
    */
   public function get_helper_window() {
@@ -405,7 +405,7 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
 
   /**
    * Process specific notice
-   * 
+   *
    * @return array|bool
    */
   public function get_process_notice() {
@@ -423,10 +423,10 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
 
   /**
    * Convert to json
-   * 
+   *
    * @return array
    */
-  public function jsonSerialize() {
+  public function jsonSerialize():mixed {
     return [
       'id' => get_called_class(),
       'name' => $this->get_name(),
@@ -445,7 +445,7 @@ abstract class BackgroundSync extends UDX_WP_Background_Process implements ISync
 
   /**
    * Log background process event
-   * 
+   *
    * @param string $message
    * @return bool TRUE on success or FALSE on failure
    */

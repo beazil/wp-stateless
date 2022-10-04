@@ -14,17 +14,34 @@
     {
       "type": "git",
       "url": "https://github.com/wpCloud/wp-stateless.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/udx/lib-settings.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/udx/lib-wp-bootstrap.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/udx/lib-ud-api-client.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/udx/lib-utility.git"
     }
   ],
   "require": {
     "php": ">=5.6.20",
-    "composer/installers": "~1.0",
-    "udx/lib-settings": "~0.3",
-    "udx/lib-wp-bootstrap": "~1.3",
-    "udx/lib-ud-api-client": "~1.2",
+    "composer/installers": "~2.0",
+    "udx/lib-settings": "^0.3",
+    "udx/lib-wp-bootstrap": "^1.3",
+    "udx/lib-ud-api-client": "^1.2",
     "ccampbell/chromephp": "^4.1",
     "firebase/php-jwt": "^6.1.2",
-    "wpmetabox/meta-box": "5.6.3"
+    "wpmetabox/meta-box": "5.6.3",
+    "psr/container": "1.0.0"
   },
   "autoload": {
     "classmap": [
@@ -86,7 +103,12 @@
     }
   },
   "require-dev": {
-    "coenjacobs/mozart": "0.6.0-beta-3",
+    "coenjacobs/mozart": "^0.7",
     "deliciousbrains/wp-background-processing": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
   }
 }
